@@ -1,1 +1,30 @@
-<p>login works!</p>
+<div class="logger">
+  <mat-card>
+    <form #logger="ngForm"
+      (ngSubmit)="submit(logger,$event)">
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput
+          placeholder="Ingrese su nombre"
+          value=""
+          id="nombre"
+          ngModel
+          name="nombre"
+          #nombre="ngModel">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Contraseña</mat-label>
+        <input matInput
+          placeholder="Ingrese su contraseña"
+          value=""
+          type="password"
+          ngModel
+          name="contrasena"
+          #contrasena="ngModel"
+          id="contrasena">
+      </mat-form-field>
+      <button mat-raised-button
+        color="primary">Enviar</button>
+    </form>
+  </mat-card>
+</div>
