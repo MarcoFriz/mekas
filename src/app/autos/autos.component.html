@@ -1,1 +1,15 @@
-<p>autos works!</p>
+<div *ngIf="!listado || listado.length == 0">
+  <p>No hay autos disponibles</p>
+</div>
+<div *ngIf="listado && listado.length!=0">
+  <p>Están los siguientes autos disponibles</p>
+  <table>
+    <tr *ngFor="let auto of listado">
+      <td>{{auto.marca}}</td>
+      <td>{{auto.modelo}}</td>
+      <td>{{auto.nombre}}</td>
+      <td>{{auto.distancia}}</td>
+    </tr>
+  </table>
+</div>
+<pre>{{listado|json}}</pre>
